@@ -386,7 +386,7 @@ h2v1_merged_upsample_565D (j_decompress_ptr cinfo,
   int * Cbbtab = upsample->Cb_b_tab;
   INT32 * Crgtab = upsample->Cr_g_tab;
   INT32 * Cbgtab = upsample->Cb_g_tab;
-  JDIMENSION col_index = 0;
+  //JDIMENSION col_index = 0;
   INT32 d0 = dither_matrix[cinfo->output_scanline & DITHER_MASK];
   unsigned int r, g, b;
   INT32 rgb;
@@ -621,7 +621,7 @@ h2v2_merged_upsample_565D (j_decompress_ptr cinfo,
   int * Cbbtab = upsample->Cb_b_tab;
   INT32 * Crgtab = upsample->Cr_g_tab;
   INT32 * Cbgtab = upsample->Cb_g_tab;
-  JDIMENSION col_index = 0;
+  //JDIMENSION col_index = 0;
   INT32 d0 = dither_matrix[cinfo->output_scanline & DITHER_MASK];
   INT32 d1 = dither_matrix[(cinfo->output_scanline+1) & DITHER_MASK];
   unsigned int r, g, b;
