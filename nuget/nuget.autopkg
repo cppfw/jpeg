@@ -1,0 +1,68 @@
+configurations {
+        UserPlatformToolset {
+                // Needed because autopackage lacks VS2015+ support
+                key = "PlatformToolset";
+                choices: "v140,v141";
+        };
+}
+
+nuget{
+	nuspec{
+		id = libjpeg_static;
+		version : 6.1.1.1; //increase this trailing number if this file has changed to generate a new version of the NuGet package
+		title: Pixman static library;
+		authors: {Keith Packard};
+		owners: {Ivan Gagis};
+		licenseUrl: "https://github.com/igagis/libjpeg/blob/master/LICENSE.txt";
+		projectUrl: "http://ijg.org/";
+		iconUrl: "http://ijg.org/";
+		requireLicenseAcceptance:false;
+		summary: JPEG static library;
+
+		description: @"JPEG static library";
+		releaseNotes: "Initial release";
+		copyright: Copyright 2019;
+		tags: { native};
+	}
+	dependencies {
+		packages : {
+		};
+	}
+	files {
+		include: {
+			"..\jpeg\*.h";
+		};
+		
+		[x86,v140,release] {
+                        lib: ..\msvs_solution\v140_Release\libjpeg.lib;
+                }
+
+                [x86,v140,debug] {
+                        lib: ..\msvs_solution\v140_Debug\libjpeg.lib;
+                }
+
+                [x64,v140,release] {
+                        lib: ..\msvs_solution\x64\v140_Release\libjpeg.lib;
+                }
+
+                [x64,v140,debug] {
+                        lib: ..\msvs_solution\x64\v140_Debug\libjpeg.lib;
+                }
+
+                [x86,v141,release] {
+                        lib: ..\msvs_solution\v141_Release\libjpeg.lib;
+                }
+
+                [x86,v141,debug] {
+                        lib: ..\msvs_solution\v141_Debug\libjpeg.lib;
+                }
+
+                [x64,v141,release] {
+                        lib: ..\msvs_solution\x64\v141_Release\libjpeg.lib;
+                }
+
+                [x64,v141,debug] {
+                        lib: ..\msvs_solution\x64\v141_Debug\libjpeg.lib;
+                }
+	}
+}
