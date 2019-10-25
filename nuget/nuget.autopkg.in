@@ -35,7 +35,7 @@ nuget{
 	}
 	files {
 		include: {
-			"..\jpeg\*.h";
+			"..\src\jpeg\*.h";
 		};
 
 		//==== v140 tools ====
