@@ -35,6 +35,7 @@ nuget{
 	}
 	files {
 		include: {
+			#destination = ${d_include}jpeg;
 			"..\src\jpeg\*.h";
 		};
 
