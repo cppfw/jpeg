@@ -1,0 +1,4 @@
+
+= jpeg
+
+`libjpeg` sources to package it for: cocoapods, Android AAR, nuget
