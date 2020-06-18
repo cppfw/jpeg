@@ -24,6 +24,7 @@ android {
         headerDir = "${project.projectDir}/../../src/"
         bundleStatic = true
         includeHeaderFilter.add("**/*.hpp")
+        includeHeaderFilter.add("**/*.h")
     }
 
     buildTypes {
