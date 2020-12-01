@@ -18,7 +18,7 @@ nuget{
 		title: Pixman static library;
 		authors: {Independent JPEG Group};
 		owners: {Ivan Gagis};
-		licenseUrl: "https://github.com/igagis/jpeg/blob/master/LICENSE";
+		licenseUrl: "https://github.com/cppfw/jpeg/blob/master/LICENSE";
 		projectUrl: "http://ijg.org/";
 		iconUrl: "http://ijg.org/";
 		requireLicenseAcceptance:false;
