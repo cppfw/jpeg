@@ -68,8 +68,8 @@ jobs:
       run: |
         cd android
         ./gradlew copy_aar --warning-mode all
-        myci-apply-version.sh -v $PACKAGE_VERSION *.pom.in
-        myci-apply-version.sh -v $PACKAGE_VERSION *.aar.in --filename-only
+        myci-apply-version.sh --version $PACKAGE_VERSION *.pom.in
+        myci-apply-version.sh --version $PACKAGE_VERSION *.aar.in --filename-only
     - name: deploy
       run: myci-deploy-maven-nexus.sh --base-url https://gagis.hopto.org/nexus --repo android android/$PACKAGE_NAME-$PACKAGE_VERSION.aar
       # if: startsWith(github.ref, 'refs/tags/')
